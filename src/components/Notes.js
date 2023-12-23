@@ -40,7 +40,7 @@ const Notes = (props) => {
 
     return (
         <>
-            <AddNote showAlert={showAlert} />
+            {/* <AddNote showAlert={showAlert} /> */}
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
             </button>
@@ -79,7 +79,7 @@ const Notes = (props) => {
             <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
             <div className="row my-3">
                 
-                <h2 className='text text-dark'>You Notes</h2>
+                <h2 className='text text-dark'>Your Notes</h2>
                 <div className="container mx-2"> 
                 {notes.length===0 && 'No notes to display'}
                 </div>

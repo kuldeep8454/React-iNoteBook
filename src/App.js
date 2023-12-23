@@ -12,6 +12,7 @@ import  Alert  from './components/Alert';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import { useState } from 'react';
+import notesBackground from "./components/images/notes.jpg"
 
 function App() {
   const [mode, setmode] = useState('light')
@@ -27,9 +28,6 @@ function App() {
   }
 
   const removeBodyClasses = ()=>{
-    // document.body.classList.remove('bg-light')
-    // document.body.classList.remove('bg-dark')
-    // document.body.classList.remove('bg-primary')
     document.body.classList.remove('bg-success')
     document.body.classList.remove('bg-warning')
     document.body.classList.remove('bg-danger')
@@ -43,7 +41,7 @@ function App() {
       setmode('dark')
       document.body.style.backgroundColor="#344480" //dark mode color
       showAlert("dark mode has been enable","success") //Alert message
-      document.title="TextForm-dark mode"; //title note
+      document.title="NoteBook-dark mode"; //title note
 
       /*setInterval(() => {
         document.title="Amazing dark mode";
@@ -63,7 +61,10 @@ function App() {
     }
 }
   return (
-    <>
+     <div style={{
+    //   backgroundImage: `url(${notesBackground})`,
+    //   backgroundSize: 'cover',
+     }}>
     
       <NoteState>
         <Router>
@@ -80,7 +81,7 @@ function App() {
           </div>
         </Router>
       </NoteState>
-    </>
+    </div>
   );
 }
 

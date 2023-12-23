@@ -56,7 +56,7 @@ const AddNote = (props) => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="description" className="form-label">Description</label>
-                    <input type="text"placeholder='Description*' className="form-control" id="description" name="description" value={note.description} onChange={onChange} style={inputStyle} minLength={5} required />
+                    <textarea type="text" placeholder='Description*' className="form-control" id="description" name="description" value={note.description} onChange={onChange} style={inputStyle} minLength={5} required />
                 </div>
                 <div className="mb-3">
                     <label  htmlFor="tag" className="form-label text-info">#Tag</label>
